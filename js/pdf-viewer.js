@@ -19,11 +19,16 @@
   //
   PDFJS.workerSrc = '/js/pdf.worker.js';
 
-  page = parseInt(getUrlVars()["page"]);
+  page = getUrlVars()["page"];
   if ( page === undefined || page > (234 - 18) || page < 1 || isNaN(page)) {
-     page = 1;
+     page = convertRoman( page );
+     
+     if (page == "InputError: Not a Roman Numeral" || page > 18) {
+      page = 1;
+     }
+     
   } else {
-   page +=  18;
+   page = parseInt(page) + 18;
   }
   
   var pdfDoc = null,
