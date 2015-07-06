@@ -19,9 +19,11 @@
   //
   PDFJS.workerSrc = '/js/pdf.worker.js';
 
-  page = getUrlVars()["page"];
-  if ( page === undefined || page > 234 || page < 1 || isNaN(page)) {
+  page = parseInt(getUrlVars()["page"]);
+  if ( page === undefined || page > (234 - 18) || page < 1 || isNaN(page)) {
      page = 1;
+  } else {
+   page +=  18;
   }
   
   var pdfDoc = null,
