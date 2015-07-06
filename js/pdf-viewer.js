@@ -130,27 +130,31 @@
       onPrevPage();
     } );
    
-   $('#selectPage ul li').click( function() {
-        
-        var page = parseInt($(this).attr('page'));
-        if ( isNaN( page ) ) {
-         page = pageNum;
-        }
-        
-        
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-            if (page == 8 && count < 1) {
-                count++;
-            } else {
-                count = 0;
-                pageNum = parseInt(page);
-                queueRenderPage( pageNum );
-            }
-        } else {
-            pageNum = parseInt(page);
-            queueRenderPage( pageNum );
-        }
+   $('#selectPage > li').hover( function() {
+	   var chapter = $('#' + parseInt($(this).attr('chapter') ) );
+	   
+	   $('#contents > li ').hide();
+	   chapter.show();
    });
+   
+   $('#selectPage  li').click( function() {
+	   var chapter = $('#' + parseInt($(this).attr('chapter') ) );
+	   
+	   $('#contents > li ').hide();
+	   chapter.show();
+	   var page = $(this).attr('page');
+	   
+	   pageNum = parseInt(page);
+	   queueRenderPage(pageNum);
+   });
+   
+   $('#contents li ul li').click( function() {
+	   var page = $(this).attr('page');
+	   
+	   pageNum = parseInt(page);
+	   queueRenderPage(pageNum);
+   });
+   
    
    $(window).load(function() {
       $('#pdf_wrapper').fadeIn(500);

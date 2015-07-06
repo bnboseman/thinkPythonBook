@@ -7,7 +7,7 @@ body {
   width: 100%;
   min-width: 700px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.75em;
+  font-size: .85em;
   background: #efefef;
   }
 
@@ -29,7 +29,6 @@ canvas {
 }
 
 #navigation ul {
-    padding: 0 20px;
     list-style: none;
     position: relative;
     display: inline-table;
@@ -37,7 +36,14 @@ canvas {
     width: 300px;
     line-height: 30px;
     color: #ffffff;
-    width:50%;
+    z-index: 100;
+    float: left;
+  }
+  #navigation ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 30px;
   }
 #navigation ul li ul {
   line-height: 14px;
@@ -55,21 +61,16 @@ canvas {
   clear: both;
   display: block;
 }
-#navigation ul li:hover > ul {
+#navigation ul li:hover  ul {
   display: block;
   cursor: pointer;
+  margin-right: -20px;
 }
 
-#navigation ul li ul li {
-background: #121212
-}
-#navigation ul li ul li ul {
-  float: right;
-position: absolute;
-left: 145px;
 
+#contents > li {
+	display: none;
 }
-      
 
 #next_page_button, #prev_page_button {
   display: block;
@@ -120,4 +121,9 @@ left: 145px;
   position: relative;
   top: 40px;
   background: #fff;
+  margin-bottom: 10px;
+}
+
+#nav {
+	display: none;
 }
