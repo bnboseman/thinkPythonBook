@@ -8,6 +8,7 @@ body {
   min-width: 700px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.75em;
+  background: #efefef;
   }
 
 #pdf_wrapper {
@@ -112,4 +113,11 @@ left: 145px;
 
 .ui-loader {
   display: none;
+}
+
+#the-canvas {
+  border: 2px solid #000;
+  position: relative;
+  top: 40px;
+  background: #fff;
 }
