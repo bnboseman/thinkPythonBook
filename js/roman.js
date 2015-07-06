@@ -238,16 +238,13 @@ function parseIntToRoman(intNumb, whichError) {
  * forms in the page - modify as    *
  * needed.                          *
  ***********************************/
-function convertRoman( input ) {
-	var rominput = input;
+function convertRoman( rominput ) {
 	return parseRomanToInt(rominput, true);
 }
-function convertToRoman() {
-	var intput = document.getElementById("number").value;
-	document.getElementById("roman").value = parseIntToRoman(intput, 1);
+function convertToRoman( intput ) {
+	 return parseIntToRoman(intput, 1);
 }
 //The next function should fix common mistakes, and at least put out a valid numeral
-function correctRoman() {
-	var wrongput = document.getElementById("roman2").value;
-	document.getElementById("roman").value = parseIntToRoman(parseRomanToInt(wrongput, false), 0);
+function correctRoman(wrongput) {
+	return parseIntToRoman(parseRomanToInt(wrongput, false), 0);
 }
