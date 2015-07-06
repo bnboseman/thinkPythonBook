@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fefefe;
+  width: 100%;
+  min-width: 700px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.75em;
+  }
+
+#pdf_wrapper {
+  min-width: 702px;
+  display: none;
+}
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+
+canvas {
+  display: block;
+  min-width: 600px;
+  width: 80%;
+  margin: 0 40px 0 40px;
+}
+
+#navigation ul {
+    padding: 0 20px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    height: 30px;
+    width: 300px;
+    line-height: 30px;
+    color: #ffffff;
+    width:50%;
+  }
+#navigation ul li ul {
+  line-height: 14px;
+  display: none;
+}
+#navigation ul li ul li {
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  background: #000000;
+  color: #fff;
+}
+#navigation ul li ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+#navigation ul li:hover > ul {
+  display: block;
+  cursor: pointer;
+}
+
+#navigation ul li ul li {
+background: #121212
+}
+#navigation ul li ul li ul {
+  float: right;
+position: absolute;
+left: 145px;
+
+}
+      
+
+#next_page_button, #prev_page_button {
+  display: block;
+  width: 41px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  top: 300px;
+  background: transparent url(../images/buttons.png) no-repeat 0px -40px;
+  z-index: 50;
+  float: left; }
+
+#next_page_button {
+  float: right;
+  background-position: -41px -40px; }
+
+#next_page_button:hover {
+  background-position: -41px 0px; }
+
+#prev_page_button:hover {
+  background-position: 0px 0px; }
+
+
+#navigation {
+  width: 100%;
+  height: 30px;
+  min-width: 702px;
+  background-color: #000000;
+  color: #ffffff;
+  position: absolute;
+}
+
+#page_nav {
+  float: right;
+  padding-right: 20px;
+  line-height: 30px;
+}
+
+.ui-loader {
+  display: none;
+}
