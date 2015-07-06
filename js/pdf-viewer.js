@@ -25,7 +25,7 @@
   } else if ( page > (234 - 18) || page < 1 || isNaN(page)) {
      page = convertRoman( page );
      
-     if (page == "InputError: Not a Roman Numeral" ) {
+     if (page == "InputError: Not a Roman Numeral" || page > 18 ) {
       page = 1;
      }
      
